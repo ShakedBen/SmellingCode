@@ -26,4 +26,6 @@
 . Jeśli używam vectory, to powinienem je includować
 . Na końcu pliku powinen być znak nowej linii
 
+Kod trzeba rozłożyć na metody, teraz jest on w 1 metodzie i często kod jest powielany. Ciężko się go testuje. Cppcheck mówi, że frameCount może być nie zainicjalizowany. Może istnieć taki przypadek, ponieważ jest to opakowane w stasznie dużą ilosć ifów. Można zmniejszyć zasięg niektórych zmiennych, ponieważ nie są używane w całym kodzie, np. pressedButton.
+
 
