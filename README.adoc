@@ -1,3 +1,4 @@
+= The Dangerous and Thrilling Documentation Chronicles
 |===
 
 | CMetrics - complexity of code | 0.57
