@@ -10,4 +10,9 @@
 
 = Spowiedź
 
-lolol
+.Parts of an atom
+. Protons
+. Electrons
+. Neutrons
+Linter na bazie dokumentacji google podał mi nastepujące poprawki:
+
