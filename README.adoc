@@ -10,9 +10,20 @@
 
 = Spowiedź
 
-.Parts of an atom
-. Protons
-. Electrons
-. Neutrons
-Linter na bazie dokumentacji google podał mi nastepujące poprawki:
+.Linter na bazie dokumentacji google podał mi nastepujące poprawki:
+. Zamiast tabulatorów, używać spacji
+. Brakuje informacji o prawach autorskich
+. Zła kolejnośc includów, najpierw powinien być systemowy, a potem inne
+. Nie używać napespace, zamiast nich "deklaracja using" np. using std::string;
+. Klamra zaczynająca wnętrze metody, powinna być w tej samej lini co nazwa metody
+. Długość lini nie powinna przekroczyć 80 znaków (u mnie przekracza 100)
+. Po znaku komentarza, powinna być spacja "// "
+. Między kodem a komentarzem powinny być co najmniej 2 spacje
+. Else powinien się znaleźć w tej samej lini co zamykająca klamra
+. Jeśli else ma klamry, to if też powinen je mieć
+. Zawartośc else nigdy nie powinna być w tej samej linii co on sam
+. Jeśli używam string, to powinienem je includować
+. Jeśli używam vectory, to powinienem je includować
+. Na końcu pliku powinen być znak nowej linii
+
 
