@@ -2,7 +2,7 @@
 
 |===
 
-| CMetrics - complexity of code | 0.57
+| CMetrics - complexity of code | 57.6
 | cppcheck | 2 warnings
 | cpplint | 3 warrnings
 
