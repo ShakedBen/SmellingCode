@@ -1,7 +1,7 @@
 == https://www.reddit.com/r/badcode/comments/39wxlc/first_try_on_a_new_language/[first_try_on_a_new_language]
 ```ruby
 	 def triangle(a,b,c)                                                         #25.4
-		[red]#if#((a+b<=c) | (a+c <=b) | (b+c<=a))		# [red]#7/6# + 23/15 + 8/6 + 1.1 + 23/15 + 8/6 + 1.1 + 23/15 + 8/6 +
+		((a+b<=c) | (a+c <=b) | (b+c<=a))		# 7/6 + 23/15 + 8/6 + 1.1 + 23/15 + 8/6 + 1.1 + 23/15 + 8/6 +
 			raise TriangleError, "Triangle inequality" # 1.1 +
 		end
 		if((a<=0) | (b<=0) | (c<=0))                    # 7/6 + 8/6 + 1.1 + 8/6 + 1.1 + 8.6 +
