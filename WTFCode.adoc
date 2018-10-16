@@ -21,9 +21,7 @@
 		end
 		:scalene
 	end
-  ```
-  
-  ```
+	
   flog -ad badcode.rb
     25.4: flog total
     25.4: flog/method average
