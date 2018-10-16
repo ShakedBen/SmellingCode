@@ -1,5 +1,5 @@
 == https://www.reddit.com/r/badcode/comments/39wxlc/first_try_on_a_new_language/
-
+```ruby
 	 def triangle(a,b,c)                                                         #25.4
 		[red]#if#((a+b<=c) | (a+c <=b) | (b+c<=a))		# [red]#7/6# + 23/15 + 8/6 + 1.1 + 23/15 + 8/6 + 1.1 + 23/15 + 8/6 +
 			raise TriangleError, "Triangle inequality" # 1.1 +
@@ -21,7 +21,8 @@
 		end
 		:scalene
 	end
-  
+  ```
+  ```
   flog -ad badcode.rb
     25.4: flog total
     25.4: flog/method average
@@ -33,4 +34,4 @@
      4.6:   +			           #23/15
      4.4:   |			           #1.1
      2.2:   raise		           #1.1
-
+```
