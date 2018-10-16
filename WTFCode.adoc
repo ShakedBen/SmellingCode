@@ -1,22 +1,22 @@
 https://www.reddit.com/r/badcode/comments/39wxlc/first_try_on_a_new_language/
 
-	def triangle(a,b,c)
-		if((a+b<=c) | (a+c <=b) | (b+c<=a))
-			raise TriangleError, "Triangle inequality"
+	def triangle(a,b,c)                                                         #25.4
+		if((a+b<=c) | (a+c <=b) | (b+c<=a))		# 7/6 + 23/15 + 8/6 + 1.1 + 23/15 + 8/6 + 1.1 + 23/15 + 8/6 +
+			raise TriangleError, "Triangle inequality" # 1.1 +
 		end
-		if((a<=0) | (b<=0) | (c<=0))
-			raise TriangleError, "Sides of zero or negative length"
+		if((a<=0) | (b<=0) | (c<=0))                    # 7/6 + 8/6 + 1.1 + 8/6 + 1.1 + 8.6 +
+			raise TriangleError, "Sides of zero or negative length"  # 1.1 +
 		end
-		if(a == b && b == c)
+		if(a == b && b == c)                            # 7/6 + 1.04 + 1.04 +
 			return :equilateral
 		end
-		if(a == b)
+		if(a == b)                                      # 7/6 + 1.04 + 
 			return :isosceles
 		end
-		if(a == c)
+		if(a == c)					# 7/6 + 1.04 + 
 			return :isosceles
 		end
-		if(c == b)
+		if(c == b)					# 7/6 + 1.04
 			return :isosceles
 		end
 		:scalene
@@ -27,10 +27,10 @@ https://www.reddit.com/r/badcode/comments/39wxlc/first_try_on_a_new_language/
     25.4: flog/method average
 
     25.4: BadCode#triangle                 badcode.rb:2-21
-     8.0:   <=
-     7.0:   branch
-     5.2:   ==
-     4.6:   +
-     4.4:   |
-     2.2:   raise
+     8.0:   <=                             #8/6
+     7.0:   branch		           #7/6
+     5.2:   ==			           #1.04
+     4.6:   +			           #23/15
+     4.4:   |			           #1.1
+     2.2:   raise		           #1.1
 
