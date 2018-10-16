@@ -1,6 +1,6 @@
 == https://www.reddit.com/r/badcode/comments/39wxlc/first_try_on_a_new_language/[first_try_on_a_new_language]
 ```ruby
-	 def triangle(a,b,c)                                                         #25.4
+	 def triangle(a,b,c)                                    #25.4
 		((a+b<=c) | (a+c <=b) | (b+c<=a))		# 7/6 + 23/15 + 8/6 + 1.1 + 23/15 + 8/6 + 1.1 + 23/15 + 8/6 +
 			raise TriangleError, "Triangle inequality" # 1.1 +
 		end
