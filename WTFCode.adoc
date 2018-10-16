@@ -22,6 +22,7 @@
 		:scalene
 	end
   ```
+  
   ```
   flog -ad badcode.rb
     25.4: flog total
