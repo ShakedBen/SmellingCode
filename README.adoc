@@ -1,10 +1,10 @@
-= C++
+= Ruby
 
 |===
 
-| https://github.com/MetricsGrimoire/CMetrics/[CMetrics - complexity of code] | 57.6
-| https://github.com/danmar/cppcheck/[cppcheck]| 2 warnings
-| https://github.com/google/styleguide/tree/gh-pages/cpplint/[cpplint] | 3 warrnings
+| https://github.com/AlDanial/cloc[Cloc] | Count Lines of Code
+| http://ruby.sadi.st/Flog.html[Flog]| ABC complexity
+| http://ruby.sadi.st/Flay.html[Flay] | Structural Similarities
 
 |===
 
