@@ -18,11 +18,11 @@ def insertion_sort(array)
       [red]#if# i [green]#<=# final[final_index]          [red]#1.3# + [green]#1.3#
         final.[red]#insert#(final_index,i)              [red]#1.55#
         break
-      [red]#elsif# final_index [green]#==# final.[blue]#length#[yellow]# - # 1   [red]#22/15# + [green]#1.2# + [blue]#22/15# + [yellow]#1.6#
-        final.[red]#insert#(final_index[blue]#*+*# 1,i)        [red]#1.55# + [blue]#1.55#
+      [red]#elsif# final_index [green]#==# final.[blue]#length#[yellow]#-1#   [red]#22/15# + [green]#1.2# + [blue]#22/15# + [yellow]#1.6#
+        final.[red]#insert#(final_index[blue]#+1#,i)        [red]#1.55# + [blue]#1.55#
         break
       end
-      final_index[red]# + # =1                                [red]#1.55#
+      final_index[red]#+=#1                                [red]#1.55#
     end
   end
   # output
