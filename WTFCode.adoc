@@ -13,21 +13,21 @@ def insertion_sort(array)
   array.[red]#delete_at#(0)                   [red]#1.0#
   # main code
   for i in array
-  final_index [red]#=# [green]#0#                         [red]#2.2# + [green]#1.3#
-  while final_index [red]#<# final.[green]#length#   	[red]#1.2# + [green]#22/15#
-  [red]#if# i [green]#<=# final[final_index]          [red]#1.3# + [green]#1.3#
-  final.[red]#insert#(final_index,i)              [red]#1.55#
-  break
-  [red]#elsif# final_index [green]#==# final.[blue]#length#[yellow]# - # 1   [red]#22/15# + [green]#1.2# + [blue]#22/15# + [yellow]#1.6#
-  final.[red]#insert#(final_index[blue]# + # 1,i)        [red]#1.55# + [blue]#1.55#
-  break
-  end
-  final_index[red]# + # =1                                [red]#1.55#
-  end
+    final_index [red]#=# [green]#0#                         [red]#2.2# + [green]#1.3#
+    while final_index [red]#<# final.[green]#length#   	[red]#1.2# + [green]#22/15#
+      [red]#if# i [green]#<=# final[final_index]          [red]#1.3# + [green]#1.3#
+        final.[red]#insert#(final_index,i)              [red]#1.55#
+        break
+      [red]#elsif# final_index [green]#==# final.[blue]#length#[yellow]# - # 1   [red]#22/15# + [green]#1.2# + [blue]#22/15# + [yellow]#1.6#
+        final.[red]#insert#(final_index[blue]# + # 1,i)        [red]#1.55# + [blue]#1.55#
+        break
+      end
+      final_index[red]# + # =1                                [red]#1.55#
+    end
   end
   # output
   final
-  end
+end
 ....
 
   flog -ad insertion-sort.rb
