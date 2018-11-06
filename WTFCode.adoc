@@ -22,7 +22,7 @@ def insertion_sort(array)
         final.[red]#insert#(final_index [blue]#+# 1,i)        [red]#1.55# + [blue]#1.55#
         break
       end
-      final_index [red]#+# =1                                [red]#1.55#
+      final_index [red]#+#= 1                                [red]#1.55#
     end
   end
   # output
