@@ -1,7 +1,7 @@
 == https://medium.com/@marcifey/insertion-sort-in-ruby-b538c55591f4/[Insertion Sort]
 ```ruby
 def insertion_sort(array)
-    raise ArgumentError, 'no strings allowed' if array.is_a? String  #1.1 + 1.3 + 1 
+    [red]#raise# ArgumentError, 'no strings allowed' if array.is_a? String  #1.1 + 1.3 + 1 
     raise ArgumentError, 'no ints allowed' if array.is_a? Integer    #1.1 + 1.3 + 1 
     raise ArgumentError, 'no floats allowed' if array.is_a? Float    #1.1 + 1.3 + 1
     if array.length == 0                                             #1.3 + 22/15 + 1.2
