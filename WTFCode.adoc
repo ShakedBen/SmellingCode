@@ -1,4 +1,4 @@
-== https://www.reddit.com/r/badcode/comments/39wxlc/first_try_on_a_new_language/[first_try_on_a_new_language]
+== https://medium.com/@marcifey/insertion-sort-in-ruby-b538c55591f4/[Insertion Sort]
 ```ruby
 	 def triangle(a,b,c)                                    #25.4
 		if((a+b<=c) | (a+c <=b) | (b+c<=a))		# 7/6 + 23/15 + 8/6 + 1.1 + 23/15 + 8/6 + 1.1 + 23/15 + 8/6 +
