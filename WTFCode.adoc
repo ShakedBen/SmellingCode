@@ -1,6 +1,6 @@
 == https://medium.com/@marcifey/insertion-sort-in-ruby-b538c55591f4/[Insertion Sort]
 [subs="quotes,attributes"]
-.https://gist.asciidoctor.org/?github-ronek22%2FZJP%2F%2FREADME.adoc[Colored version of doc]
+.http://gist.asciidoctor.org/?github-rpokrzywniak%2FSmellingCode%2F%2FWTFCode.adoc[Colored]
 ....
 def insertion_sort(array)
   [red]#raise# ArgumentError, 'no strings allowed' [green]#if# array.[blue]#is_a?# String  [red]#1.1# + [green]#1.3# + [blue]#1#
