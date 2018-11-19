@@ -19,8 +19,7 @@ namespace csharpcore
 
         public void UpdateQuality()
         {
-            List<Item> items = Items as List<Item>;
-            items.Where(item => item.Name != "Sulfuras, Hand of Ragnaros").ToList().ForEach(item=>
+            Items.Where(item => item.Name != "Sulfuras, Hand of Ragnaros").ToList().ForEach(item=>
             {
                 item.SellIn--;
                 ChangeQuality(item);
