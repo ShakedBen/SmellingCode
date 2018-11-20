@@ -7,23 +7,37 @@ namespace csharpcore
     {
         IList<Item> Items;
         IList<string> ItemsThatIncreaseQuality;
+        IList<string> ItemsThatDecreaseQuality;
         public GildedRose(IList<Item> Items)
         {
             this.Items = Items;
             ItemsThatIncreaseQuality = new List<string>
             {
                 "Aged Brie",
-                "Backstage passes to a TAFKAL80ETC concert",
+                "Backstage passes to a TAFKAL80ETC concert"
+            };
+            ItemsThatDecreaseQuality = new List<string>
+            {
+                "+5 Dexterity Vest",
+                "Elixir of the Mongoose",
+                "Conjured Mana Cake"
             };
         }
 
         public void UpdateQuality()
         {
-            Items.Where(item => item.Name != "Sulfuras, Hand of Ragnaros").ToList().ForEach(item=>
+            var itemsWithoutSulfuras = Items.Where(item => !IsSulfuras(item)).ToList();
+
+            itemsWithoutSulfuras.ForEach(item =>
             {
-                item.SellIn--;
                 ChangeQuality(item);
+                item.SellIn--;
             });
+
+            itemsWithoutSulfuras.Where(item => item.Quality < 0 || (IsBackstage(item) && item.SellIn < 0))
+                .ToList().ForEach(item => item.Quality = 0);
+
+            itemsWithoutSulfuras.Where(item => item.Quality > 50).ToList().ForEach(item => item.Quality = 50);
         }
         private void ChangeQuality(Item item)
         {
@@ -34,38 +48,42 @@ namespace csharpcore
         }
         private void IncreaseQuality(Item item)
         {
-            int quality = (item.SellIn >= 0) ? 1 : 2;
+            var quality = GetBaseQuality(item);
 
-            if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
+            if (IsBackstage(item))
             {
-                if (item.SellIn < 5)
+                if (item.SellIn <= 5)
                     quality += 2;
-                else if (item.SellIn < 10)
-                    quality ++;
-
-                if (item.SellIn < 0)
-                {
-                    item.Quality = 0;
-                    return;
-                }
+                else if (item.SellIn <= 10)
+                    quality++;
             }
 
             item.Quality += quality;
-
-            if (item.Quality > 50)
-                item.Quality = 50;
         }
         private void DecreaseQuality(Item item)
         {
-            int quality = (item.SellIn >= 0) ? 1 : 2;
+            var quality = GetBaseQuality(item);
 
-            if (item.Name == "Conjured Mana Cake")
+            if (IsConjured(item))
                 quality *= 2;
 
             item.Quality -= quality;
-
-            if (item.Quality < 0)
-                item.Quality = 0;
+        }
+        private int GetBaseQuality(Item item)
+        {
+            return (item.SellIn > 0) ? 1 : 2;
+        }
+        private bool IsSulfuras(Item item)
+        {
+            return item.Name == "Sulfuras, Hand of Ragnaros";
+        }
+        private bool IsBackstage(Item item)
+        {
+            return item.Name == ItemsThatIncreaseQuality[1];
+        }
+        private bool IsConjured(Item item)
+        {
+            return item.Name == ItemsThatDecreaseQuality[2];
         }
     }
 }
